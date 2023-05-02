@@ -8,7 +8,9 @@ nav {
     background: linear-gradient(45deg, rgb(255,69,0), midnightblue);
     height: 100%;
     display: flex;
-    text-align: center;
+    justify-items: center;
+    align-items: center;
+    position: relative;
     margin: 0;
     padding: 0;
 
@@ -18,12 +20,40 @@ nav {
     margin-right: 10px;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    text-align: center;
+    justify-items: center;
+    align-items: center;
+    position: relative;
 }
 
 .déconnecter {
     display:none;
 }
 
+@media screen and (max-width: 500px){
+    
+    liste{
+        flex-direction:column;
+        height: 200px;
+    }
+    .items:nth-child(1) {
+        border-top: 1px solid #000000;
+        margin-top: 50px;
+    }  
+    .items {
+        height: 50px;
+        width: 100%;
+        border-bottom: 1px #000000;
+        line-height: 50px;
+    }
+
+    .déconnecter {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #000000;
+        cursor: pointer;
+    }
 
     
+ }
